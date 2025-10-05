@@ -8,11 +8,11 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #1a1a1a; /* fundo preto */
-      color: #f3f3f3; /* texto branco */
+      background: #1a1a1a;
+      color: #f3f3f3;
     }
     header {
-      background: linear-gradient(90deg, #ff6600, #ff9900); /* laranja degradê */
+      background: linear-gradient(90deg, #ff6600, #ff9900);
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -28,7 +28,7 @@
     .btn-discord-header {
       display: inline-block;
       padding: 14px 28px;
-      background: #7289da; /* azul Discord */
+      background: #7289da;
       color: white;
       font-weight: bold;
       border-radius: 8px;
@@ -44,7 +44,7 @@
     main {
       max-width: 800px;
       margin: 40px auto;
-      background: #1a1a1a; /* preto */
+      background: #1a1a1a;
       border-radius: 12px;
       padding: 30px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -53,17 +53,49 @@
       margin-bottom: 30px;
     }
     h2 {
-      color: #ff6600; /* laranja nos títulos */
+      color: #ff6600;
     }
     footer {
       text-align: center;
       padding: 20px;
       color: #ccc;
-      background: #000; /* preto no footer */
+      background: #000;
     }
     img.truck {
       width: 100%;
       border-radius: 8px;
+    }
+    /* Card miniatura do servidor */
+    .server-card {
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(255,102,0,0.3);
+    }
+    .server-card h3 {
+      margin: 0 0 10px;
+      color: #ff6600;
+    }
+    .server-card p {
+      margin: 6px 0;
+      font-weight: bold;
+    }
+    .server-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #ff6600;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .server-card a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255,102,0,0.6);
     }
   </style>
 </head>
@@ -88,7 +120,13 @@
 
     <section>
       <h2>Status do Servidor</h2>
-      <iframe src="https://servidores.ararasstudio.com/details.html?id=85568392935169594%2F101" width="100%" height="400" style="border:none;"></iframe>
+      <div class="server-card">
+        <h3>Avant VTC Server</h3>
+        <p>🟢 Online</p>
+        <p>12 / 50 jogadores</p>
+        <p>Mapa: Europa</p>
+        <a href="https://servidores.ararasstudio.com/details.html?id=85568392935169594%2F101" target="_blank">Ver detalhes</a>
+      </div>
     </section>
   </main>
 
