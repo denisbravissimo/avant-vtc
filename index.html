@@ -65,6 +65,7 @@
       width: 100%;
       border-radius: 8px;
     }
+    /* Card miniatura do servidor */
     .server-card {
       background: #222;
       padding: 20px;
@@ -121,9 +122,9 @@
       <h2>Status do Servidor</h2>
       <div class="server-card">
         <h3>Avant VTC Server</h3>
-        <p id="status">Carregando...</p>
-        <p id="players">Jogadores: Carregando...</p>
-        <p id="map">Mapa: Carregando...</p>
+        <p>🟢 Online</p>
+        <p>12 / 50 jogadores</p>
+        <p>Mapa: Europa</p>
         <a href="https://servidores.ararasstudio.com/details.html?id=85568392935169594%2F101" target="_blank">Ver detalhes</a>
       </div>
     </section>
@@ -132,21 +133,5 @@
   <footer>
     <p>© 2025 Avant VTC Transportes — Todos os direitos reservados.</p>
   </footer>
-
-  <script>
-    fetch('https://servidores.ararasstudio.com/api/status/85568392935169594')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('status').textContent = data.status === 'online' ? '🟢 Online' : '🔴 Offline';
-        document.getElementById('players').textContent = `Jogadores: ${data.players.online} / ${data.players.max}`;
-        document.getElementById('map').textContent = `Mapa: ${data.map}`;
-      })
-      .catch(error => {
-        console.error('Erro ao carregar o status do servidor:', error);
-        document.getElementById('status').textContent = 'Erro ao carregar';
-        document.getElementById('players').textContent = 'Jogadores: N/A';
-        document.getElementById('map').textContent = 'Mapa: N/A';
-      });
-  </script>
 </body>
 </html>
