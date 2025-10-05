@@ -8,11 +8,11 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #1a1a1a; /* fundo preto */
-      color: #f3f3f3; /* texto branco */
+      background: #1a1a1a;
+      color: #f3f3f3;
     }
     header {
-      background: linear-gradient(90deg, #ff6600, #ff9900); /* laranja degradê */
+      background: linear-gradient(90deg, #ff6600, #ff9900);
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -25,26 +25,38 @@
       font-size: 1.2em;
       margin: 10px 0 20px;
     }
-    .btn-discord-header {
+    .btn-discord-header,
+    .btn-instagram-header {
       display: inline-block;
       padding: 14px 28px;
-      background: #7289da; /* azul Discord */
       color: white;
       font-weight: bold;
       border-radius: 8px;
       text-decoration: none;
       font-size: 1em;
       transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      margin: 5px;
+    }
+    .btn-discord-header {
+      background: #7289da;
     }
     .btn-discord-header:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 12px rgba(114,137,218,0.6);
       background: #5b6eae;
     }
+    .btn-instagram-header {
+      background: #ff6600; /* laranja da Avant */
+    }
+    .btn-instagram-header:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255,102,0,0.6);
+      background: #ff9900;
+    }
     main {
       max-width: 800px;
       margin: 40px auto;
-      background: #1a1a1a; /* preto */
+      background: #1a1a1a;
       border-radius: 12px;
       padding: 30px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -53,33 +65,17 @@
       margin-bottom: 30px;
     }
     h2 {
-      color: #ff6600; /* laranja nos títulos */
+      color: #ff6600;
     }
     footer {
       text-align: center;
       padding: 20px;
       color: #ccc;
-      background: #000; /* preto no footer */
+      background: #000;
     }
     img.truck {
       width: 100%;
       border-radius: 8px;
-    }
-    .btn-instagram {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #E1306C; /* cor rosa do Instagram */
-      color: white;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-    }
-    .btn-instagram:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(225,48,108,0.6);
-      background: #C13584;
     }
   </style>
 </head>
@@ -88,6 +84,7 @@
     <h1>🚛 Avant VTC Transportes</h1>
     <p>Virtual Trucking Company — ETS2</p>
     <a href="https://discord.gg/Zp9xbnxeDh" target="_blank" class="btn-discord-header">Entrar no Discord</a>
+    <a href="https://www.instagram.com/avant_vtc" target="_blank" class="btn-instagram-header">Siga no Instagram</a>
   </header>
 
   <main>
@@ -110,7 +107,6 @@
 
   <footer>
     <p>© 2025 Avant VTC Transportes — Todos os direitos reservados.</p>
-    <a href="https://www.instagram.com/avant_vtc" target="_blank" class="btn-instagram">Siga no Instagram</a>
   </footer>
 </body>
 </html>
