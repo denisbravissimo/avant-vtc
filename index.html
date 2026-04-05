@@ -98,10 +98,46 @@
       <img class="truck" src="https://i.postimg.cc/PxcKtRqh/Screenshot-2025-10-04-22-36-18-244-com-instagram-android-edit.jpg" alt="Caminhão ETS2">
       <p>Trabalhamos com diversos modelos e skins personalizados para representar nossa equipe nas estradas virtuais do mundo.</p>
     </section>
+
+    <!-- STATUS AUTOMÁTICO -->
+    <section>
+      <h2>Status do Servidor</h2>
+
+      <div id="status-box" style="
+        background:#2a2a2a;
+        padding:20px;
+        border-radius:10px;
+        text-align:center;
+        font-size:18px;
+      ">
+        🔄 Carregando status...
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>© 2025 Avant VTC Transportes — Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    async function atualizarStatus() {
+      try {
+        const resposta = await fetch("https://api.allorigins.win/raw?url=https://servidores.ararasstudio.com/details.html?id=85568392935169594%2F101");
+        const texto = await resposta.text();
+
+        if (texto.toLowerCase().includes("online")) {
+          document.getElementById("status-box").innerHTML = "🟢 Servidor Online 🚛";
+        } else {
+          document.getElementById("status-box").innerHTML = "🔴 Servidor Offline";
+        }
+
+      } catch (erro) {
+        document.getElementById("status-box").innerHTML = "⚠️ Erro ao carregar status";
+      }
+    }
+
+    setInterval(atualizarStatus, 30000);
+    atualizarStatus();
+  </script>
 </body>
 </html>
